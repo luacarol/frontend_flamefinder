@@ -13,7 +13,6 @@ async function displayImages() {
   const data = await fetchImages();
   try {
     const postsList = data.map(item => {
-      // console.log(item.grauRiscoIncendio)
 
       let riskClass = '';
       if (item.grauRiscoIncendio === 'Alto') {
