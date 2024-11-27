@@ -2,7 +2,7 @@
 
 :root {
     --font-size-base: 16px;
-    --primary-color: #45474B;
+    --primary-color: #1F1723;
     --secondary-color: #F5F7F8;
     --tertiary-color: #379777;
 
@@ -25,6 +25,23 @@ body {
     background-color: var(--secondary-color);
     width: 100%;
     height: 100vh;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section {
+    font-size: 1.375rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 /* Navbar */
@@ -69,11 +86,8 @@ body {
     background-color: var(--secondary-color);
 }
 
-.profile-header {
-    display: flex;
-    align-items: center;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--primary-color);
+.profile-header-content {
+    align-items: flex-end;
 }
 
 .profile-pic {
@@ -84,17 +98,43 @@ body {
     border: 3px solid var(--primary-color);
 }
 
-.profile-info h1 {
-    font-size: 1.5rem;
+.profile-info .profile-info-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+}
+
+.profile-info h2 {
+    font-size: 1rem;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .profile-info p {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: var(--primary-color);
     font-weight: 500;
+}
+
+.profile-info .imglabelicon {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-info .imglabelicon img {
+    margin-right: 0.4rem;
+}
+
+.profile-info .imglabelicon label {
+    font-weight: 600;
+}
+
+.profile-info .platforms-section {
+    font-size: 0.75rem;
+    margin-left: 4rem;
+}
+
+.profile-info .platform-section {
+    margin-bottom: 1rem;
 }
 
 /* Grid de Imagens */
@@ -187,7 +227,7 @@ body {
     }
 
     .profile-info p {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
     }
 
     .image-grid {
@@ -253,7 +293,7 @@ body {
     }
 
     .profile-info p {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
         color: var(--primary-color);
         font-weight: 500;
     }
