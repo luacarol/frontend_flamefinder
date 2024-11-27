@@ -13,15 +13,26 @@ async function displayImages() {
   const data = await fetchImages();
   try {
     const postsList = data.map(item => {
+      // console.log(item.grauRiscoIncendio)
+
+      let riskClass = '';
+      if (item.grauRiscoIncendio === 'Alto') {
+        riskClass = 'alto';
+      } else if (item.grauRiscoIncendio === 'Médio') {
+        riskClass = 'medio';
+      } else if (item.grauRiscoIncendio === 'Baixo') {
+        riskClass = 'baixo';
+      }
+
       return `
-          <article data-description="${item.descricao}" class="image-container">
-            <figure>
-              <div class="image-wrapper">
-                <span class="image-text">${item.grauRiscoIncendio}</span>
-                <img src="${item.urlImagem}" alt="${item.textoAlternativo}" />
-              </div>
-            </figure>
-          </article>
+           <article data-description="${item.descricao}" class="image-container">
+    <figure>
+      <div class="image-wrapper">
+        <span class="image-text ${riskClass}">${item.grauRiscoIncendio}</span>
+        <img src="${item.urlImagem}" alt="${item.textoAlternativo}" />
+      </div>
+    </figure>
+  </article>
         `;
     }).join('');
     imageGrid.insertAdjacentHTML('beforeend', postsList)
