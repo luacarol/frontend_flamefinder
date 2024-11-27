@@ -60,41 +60,6 @@ body {
     color: #45474b;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.9375rem;
-    margin-right: 1rem;
-}
-
-/* Botão de Login */
-.login-btn {
-    background-color: black;
-    color: var(--secondary-color);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius-small);
-    cursor: pointer;
-    transition: background-color var(--transition-fast);
-}
-
-.login-btn:hover {
-    background-color: var(--tertiary-color);
-    color: var(--secondary-color);
-}
-
-/* Link de Cadastro */
-.signup-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color var(--transition-fast);
-}
-
-.signup-link:hover {
-    color: var(--tertiary-color);
-}
-
 /* Profile */
 .profile-container {
     width: 100%;
@@ -209,11 +174,6 @@ body {
 
     .navbar .logo {
         font-size: 1.5rem;
-    }
-
-    .nav-links {
-        gap: 0.9rem;
-        font-size: 0.75rem;
     }
 
     .profile-pic {
